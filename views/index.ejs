@@ -4,65 +4,18 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<%- include('./layouts/head.ejs') %>
 <html>
-  <head>
-    <title>Hyperspace by HTML5 UP</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
+
   <body class="is-preload">
     <%- include('./layouts/header.ejs') %>
 
     <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Intro -->
-      <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
-          <h1>Bienvenido</h1>
-          <p>
-            En esta página podrá reportar la perdida de sus documentos y objetos
-            personales.
-          </p>
-          <ul class="actions">
-            <li>
-              <a href="#one" class="button scrolly">Añadir objeto perdido</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- One -->
-      <section id="one" class="wrapper style2 spotlights">
-        <%- include('./module_wilmar.ejs') %>
-      </section>
-
-      <!-- Two -->
-      <section id="two" class="wrapper style3 fade-up">
-        <%- include('./module_hans.ejs') %>
-      </section>
-
-      <!-- Three -->
-      <section id="three" class="wrapper style1 fade-up">
-        <%- include('./module_cristian.ejs') %>
-      </section>
+      <%- include('./home.ejs') %>
     </div>
 
     <%- include('./layouts/footer.ejs') %>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <%- include('./layouts/scripts.ejs') %>
   </body>
 </html>
