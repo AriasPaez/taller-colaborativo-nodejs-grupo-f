@@ -5,3 +5,5 @@ Aplicativo web desarrollado en NodeJS para la asignatura de Electiva II para el 
 
 ## Instalación
   ``` npm i package ```
+  ## Ejecución del proyecto
+  ``` npm start ```
