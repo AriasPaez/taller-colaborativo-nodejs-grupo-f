@@ -28,5 +28,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(3000, (req, res) => {
-  console.log("Server running!");
+  console.log("Server running at PORT:",3000);
 });
