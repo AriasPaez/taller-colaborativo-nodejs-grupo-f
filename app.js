@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.status(404).json({error: "Page Not Found" });
+  res.render('not_found')
 });
 
 app.listen(3000, (req, res) => {
