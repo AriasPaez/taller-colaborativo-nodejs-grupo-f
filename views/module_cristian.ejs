@@ -20,14 +20,16 @@
           </p>
           <div class="split style1">
             <section>
-              <form method="POST" action="/search_posts/">
+              <form method="POST" action="/search_posts">
                 <div class="col-12">
-                  <select name="demo-category" id="demo-category">
-                    <option value="">- Sin filtro / Todos -</option>
-                    <option value="1">Ciudad</option>
-                    <option value="1">Shipping</option>
-                    <option value="1">Administration</option>
-                    <option value="1">Human Resources</option>
+                  <select name="filterBy" id="demo-category">
+                    <% if(filter) {%>
+                      <% for(let i in filter) {%>
+                        <option value=<%= filter[i].clave%> ><%= filter[i].valor%></option>
+                        
+                        <% } %>
+                    <% } %>
+
                   </select>
                 </div>
                 <div class="col-6 col-12-medium">
@@ -38,8 +40,12 @@
               </form>
               <section>
                 <h3>Publicaciones</h3>
-                <% if (posts) { %> Si hay <% } else { %> No hay, vuelva mas
-                tarde <% } %>
+                <% if (posts.length > 0) { %> 
+
+                Si hay 
+                <% }else { %> 
+                  No hay, vuelva mas tarde 
+                  <% } %>
               </section>
             </section>
           </div>
