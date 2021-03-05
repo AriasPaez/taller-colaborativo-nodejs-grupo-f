@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/AriasPaez/taller-colaborativo-nodejs-grupo-f#readme",
   "dependencies": {
+    "alert": "^5.0.10",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "package": "^1.0.1"
   }
 }
