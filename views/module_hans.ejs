@@ -11,9 +11,65 @@
 
     <!-- Wrapper -->
     <div id="wrapper">
+      <!-- Main -->
+      <section id="three" class="wrapper style1 fade-up">
+        <div class="inner">
+          
+          <% for(let i in posts1) {%>
+            <h3>COMENTAIRIOS :</h3>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="">Nombre:</label>
+                <input type="text" name="name1" id="name1" disabled value=`<%= posts1[i].nombre%> ` />
+  
+              </div>
 
-      AQUI VAN SUS COSAS HANS
-      
+
+              <div class="col-md-6">
+                <label for="">Telefono:</label>
+                <input type="text" name="name1" id="name1" disabled value=`<%= posts1[i].telefono%> ` />
+                
+              </div>
+              <div class="col-9">
+                <br>
+              </div>
+              <div class="col-7">
+                <label for="">Comentario:</label>
+                <textarea name="" id="" cols="30" disabled rows="3"> <%= posts1[i].comentario%></textarea>
+              </div>
+              
+            </form>
+
+          <% } %>
+          <div class="split style1">
+            
+            <section>
+              <h2> NUEVO COMENTAIRIO :</h2>
+              <form method="POST" action="/foro">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name" >Nombre:</label>
+                    <input type="text" name="name" id="name" />
+                    <input type="text" name="id" id="id"  value=`<%= id1%> `/>
+                  </div>
+                  <div class="field half">
+                    <label for="Phone">Telefono:</label>
+                    <input type="text" name="Phone" id="Phone" />
+                  </div>
+                  <div class="field">
+                    <label for="message">Mensaje:</label>
+                    <textarea name="message" id="message" rows="3"></textarea>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li><a href="" class="button submit">Enviar Mensaje</a></li>
+                </ul>
+              </form>
+            </section>
+           
+          </div>
+        </div>
+      </section>
     </div>
 
     <%- include('./layouts/footer.ejs') %> <%- include('./layouts/scripts.ejs')
