@@ -16,11 +16,11 @@ router.get("/", (req, res,next) => {
 
 
 router.post("/", (req, res,next) => {
-  console.log("aqui vamos11 ");
+ 
   let posts = "";
   let a= req.body;
   let id1;
-  console.log(a);
+  
   readFile(path.join(__dirname, pathPosts), function (err, data) {
     posts = JSON.parse(data);
      let newArr = posts.filter(function (el) {
@@ -42,7 +42,7 @@ router.post("/", (req, res,next) => {
            
             element.comentarios.push({nombre:a.name,telefono:a.Phone,comentario:a.message});
             const json_Post = JSON.stringify(posts);
-            console.log(element.comentarios);
+            
             fs.writeFileSync('models/posts.json', json_Post , 'utf-8');
           }
         });
@@ -57,9 +57,5 @@ router.post("/", (req, res,next) => {
   
 });
 
-router.post("/foro", (req, res,next) => {
-console.log("aqui vamos ");
 
-  
-});
 module.exports = router;

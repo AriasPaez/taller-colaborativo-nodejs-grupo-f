@@ -16,7 +16,7 @@
         <div class="inner">
           
           <% for(let i in posts1) {%>
-            <h3>COMENTAIRIOS :</h3>
+            <h3>COMENTARIOS :</h3>
             <form class="row g-3">
               <div class="col-md-6">
                 <label for="">Nombre:</label>
@@ -44,13 +44,15 @@
           <div class="split style1">
             
             <section>
-              <h2> NUEVO COMENTAIRIO :</h2>
+              <input type="text" name="id" id="id" disabled style="color:transparent " value=`<%= id1%> `/>
+              <h2> NUEVO COMENTARIO :</h2>
+             
               <form method="POST" action="/foro">
                 <div class="fields">
                   <div class="field half">
                     <label for="name" >Nombre:</label>
                     <input type="text" name="name" id="name" />
-                    <input type="text" name="id" id="id"  value=`<%= id1%> `/>
+                    
                   </div>
                   <div class="field half">
                     <label for="Phone">Telefono:</label>
