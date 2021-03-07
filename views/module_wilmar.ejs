@@ -12,7 +12,62 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-      AQUI VAN SUS COSAS WILMAR
+       
+      <section id="three" class="wrapper style1 fade-up">
+        <div class="inner">
+          <h2>Crear Post</h2>
+          <p>Tenga en cuenta que la creacion de post sera validada por un admin</p>
+          <div class=" style1">
+            <section>
+              <form method="post" action="/new_post">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="title" id="title" autofocus required/>
+                  </div>
+                  <div class="field half" style="display: none">
+                    <label for="email">Fecha</label>
+                    <input type="text" name="date" id="date" placeholder="${date}" readonly required />
+                  </div>
+                  <div class="field half">
+                    <label for="Ciudad">Ciudad</label>
+                    <select id="city" name="city"  required>
+                      <option value="Sogamoso">Sogamoso</option>
+                      <option value="Sogamoso">Tunja</option>
+                      <option value="Sogamoso">Duitama</option>
+                    </select>
+                 
+                  </div>
+
+                 
+                  <div class="field half">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="Name" id="Name"   required/>
+                  </div>
+                  <div class="field half">
+                    <label for="email">Numero Contacto</label>
+                    <input type="text" name="Numbers_Contact" id="Numbers_Contact"  required/>
+                  </div>
+                  <div class="field half">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" name="Last_Name" id="Last_Name"  required/>
+                  </div>
+                  
+
+                  <div class="field half">
+                    <label for="email">Imagen</label>
+                    <input type="file" name="poster" id="poster"/>
+                  </div>
+                  <div class="field">
+                    <label for="message">Descripcion</label>
+                    <textarea name="description" id="description" rows="5"  required></textarea>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li><a href="" class="button submit" type="submit" >Crear Post</a></li>
+                </ul>
+              </form>
+            </section>
 
     </div>
 
