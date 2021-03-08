@@ -22,12 +22,12 @@ router.post("/", (req, res) => {
   console.log('tu id sera ' +cont);
   const {id,title ,date,city,Numbers_Contact,Name,Last_Name,poster,description} = req.body;
   var d = new Date();
-    if (!title || !date || !city || !Numbers_Contact || !Name || !Last_Name || !poster  || !description) {
+  if (!title || !city || !Numbers_Contact || !Name || !Last_Name || !poster  || !description) {
+    console.log('datos no ingresados por campos vacios');
+    res.render('module_wilmar');
+    return;
 
-      res.status(400).send('algunos campos estan vacios');
-      return;
-
-    }
+  }
 
 
     let newPost = {
@@ -52,9 +52,9 @@ router.post("/", (req, res) => {
    fs.writeFileSync('models/posts.json', json_Post , 'utf-8');
 
 
-  console.log(json_Post);
-  console.log(req.body);
-  res.render('module_wilmar');
+   console.log(req.body);
+   console.log('datos ingresados');
+   res.render('module_wilmar');
 });
 
 module.exports = router;
