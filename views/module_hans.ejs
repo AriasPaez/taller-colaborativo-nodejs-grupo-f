@@ -44,15 +44,14 @@
           <div class="split style1">
             
             <section>
-              <input type="text" name="id" id="id" disabled style="color:transparent " value=`<%= id1%> `/>
-              <h2> NUEVO COMENTARIO :</h2>
              
-              <form method="POST" action="/foro">
+              <form method="POST" action="/foro"> 
+                <input type="text" name="id" id="id" style="color:transparent " value=`<%= id1%> `/>
+                <h2> NUEVO COMENTARIO :</h2>
                 <div class="fields">
                   <div class="field half">
                     <label for="name" >Nombre:</label>
                     <input type="text" name="name" id="name" />
-                    
                   </div>
                   <div class="field half">
                     <label for="Phone">Telefono:</label>
